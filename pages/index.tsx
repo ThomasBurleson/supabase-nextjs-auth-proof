@@ -1,6 +1,6 @@
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { CheckMFA } from "../components/checkMFA";
+import { CheckMFA } from "../components/CheckMFA";
 
 const Home = () => {
   const session = useSession();
@@ -13,7 +13,7 @@ const Home = () => {
           supabaseClient={supabase}
           appearance={{ theme: ThemeSupa }}
           theme="dark"
-          providers={[ 'google' ]}
+          providers={["google"]}
         />
       ) : (
         <CheckMFA />
